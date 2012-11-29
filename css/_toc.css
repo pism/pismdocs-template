@@ -7,23 +7,23 @@
 ********************************************************************/
 
 /* toc container */
-.dokuwiki div.toc, /* old, until 2012-01-25 */
-#dw__toc /* new */ {
-    float: right;
-    margin: 0 0 1.4em 1.4em;
-    width: 12em;
-    background-color: __background_alt__;
-    color: inherit;
-}
-[dir=rtl] .dokuwiki div.toc, /* old, until 2012-01-25 */
-[dir=rtl] #dw__toc /* new */ {
-    float: left;
-    margin: 0 1.4em 1.4em 0;
+
+div.dokuwiki #dw__toc {
+  margin: 1.2em 0 0 2em;
+  float: right;
+  width: 200px;
+  font-size: 80%;
+  clear: both;
 }
 
 /*____________ toc header ____________*/
 
-.dokuwiki div.tocheader, /* old */
+div.dokuwiki .toggle.open,
+div.dokuwiki .toggle.closed {
+    background-color: __background_alt__;
+    border: 1px solid __background_alt__;
+}
+
 #dw__toc h3 /* new */ {
     padding: .2em .5em;
     font-weight: bold;
@@ -31,55 +31,45 @@
     font-size: 1em;
 }
 
-.dokuwiki .toc span.toc_open, /* old */
-.dokuwiki .toc span.toc_close, /* old */
 #dw__toc h3 strong /* new */ {
     float: right;
-    margin: 0 .2em;
     line-height: 1;
 }
-[dir=rtl] .dokuwiki .toc span.toc_open, /* old */
-[dir=rtl] .dokuwiki .toc span.toc_close, /* old */
-[dir=rtl] #dw__toc h3 strong /* new */ {
-    float: left;
+
+/* ---------- table of contents ------------------- */
+
+div.dokuwiki .toc {
+  border: 1px solid __border__;
+  background-color: __background__;
+  text-align: left;
+  padding: 0.5em 0 0.7em 0;
 }
 
-/*____________ toc list ____________*/
+div.dokuwiki ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  padding-left: 1em;
+  margin: 0;
+}
 
-.dokuwiki #toc__inside,
-#dw__toc > div {
-    padding: .2em .5em;
+div.dokuwiki ul.toc div.li {
+  padding-left: 0.4em;
 }
-.dokuwiki #toc__inside ul, /* old */
-#dw__toc ul /* new */ {
-    padding: 0;
-    margin: 0;
+
+div.dokuwiki ul.toc li {
+  background: transparent url(images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left: 0.4em;
 }
-.dokuwiki #toc__inside ul li, /* old */
-#dw__toc ul li /* new */ {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    line-height: 1.1;
+
+div.dokuwiki a.toc:link,
+div.dokuwiki a.toc:visited {
+  color: __existing__;
 }
-.dokuwiki #toc__inside ul li div.li, /* old */
-#dw__toc ul li div.li /* new */ {
-    padding: .15em 0;
-}
-.dokuwiki #toc__inside ul ul, /* old */
-#dw__toc ul ul /* new */ {
-    padding-left: 1em;
-}
-[dir=rtl] .dokuwiki #toc__inside ul ul, /* old */
-[dir=rtl] #dw__toc ul ul /* new */ {
-    padding-left: 0;
-    padding-right: 1em;
-}
-.dokuwiki #toc__inside ul ul li, /* old */
-#dw__toc ul ul li /* new */ {
-}
-.dokuwiki #toc__inside ul li a, /* old */
-#dw__toc ul li a /* new */ {
+
+div.dokuwiki a.toc:hover,
+div.dokuwiki a.toc:active {
+  color: __text__;
 }
 
 /* in case of toc list jumping one level

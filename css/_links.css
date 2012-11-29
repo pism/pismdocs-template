@@ -6,9 +6,11 @@
 
 /* existing wikipage */
 .dokuwiki a.wikilink1 {
+    color: __existing__ !important;
 }
 /* not existing wikipage */
 .dokuwiki a.wikilink2 {
+    color: __missing__ !important;
     text-decoration: none;
 }
 .dokuwiki a.wikilink2:link,
@@ -40,26 +42,14 @@
 /* external link */
 .dokuwiki a.urlextern {
     background-image: url(images/external-link.png);
-    /*
-    @deprecated, change since Adora Belle:
-    background-image: url(../../images/external-link.png);
-    */
 }
 /* windows share */
 .dokuwiki a.windows {
     background-image: url(images/unc.png);
-    /*
-    @deprecated, change since Adora Belle:
-    background-image: url(../../images/unc.png);
-    */
 }
 /* email link */
 .dokuwiki a.mail {
     background-image: url(images/email.png);
-    /*
-    @deprecated, change since Adora Belle:
-    background-image: url(../../images/email.png);
-    */
 }
 
 /* icons of the following are set by dokuwiki in lib/exe/css.php */
@@ -68,15 +58,4 @@
 }
 /* interwiki link */
 .dokuwiki a.interwiki {
-}
-
-/* RTL corrections */
-[dir=rtl] .dokuwiki a.urlextern,
-[dir=rtl] .dokuwiki a.windows,
-[dir=rtl] .dokuwiki a.mail,
-[dir=rtl] .dokuwiki a.interwiki,
-[dir=rtl] .dokuwiki a.mediafile {
-    background-position: right center;
-    padding: 0 18px 0 0;
-    display: inline-block; /* needed for IE7 */
 }

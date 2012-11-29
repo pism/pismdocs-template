@@ -50,45 +50,6 @@ body {
     height: 1%;
 }
 
-    /* show sidebar only in show mode */
-    #dokuwiki__aside {
-        display: none;
-    }
-    .mode_show #dokuwiki__aside {
-        width: __sidebar_width__;
-        float: left;
-        position: relative;
-        display: block;
-    }
-    [dir=rtl] .mode_show #dokuwiki__aside {
-        float: right;
-    }
-    #dokuwiki__aside > .pad {
-        margin: 0 1.5em 0 0;
-    }
-    [dir=rtl] #dokuwiki__aside > .pad {
-        margin: 0 0 0 1.5em;
-    }
-
-    /* make content wider when there's no sidebar */
-    .mode_show #dokuwiki__content {
-        float: right;
-        margin-left: -__sidebar_width__;
-        width: 100%;
-    }
-    [dir=rtl] .mode_show #dokuwiki__content {
-        float: left;
-        margin-left: 0;
-        margin-right: -__sidebar_width__;
-    }
-    .mode_show #dokuwiki__content > .pad {
-        margin-left: __sidebar_width__;
-    }
-    [dir=rtl] .mode_show #dokuwiki__content > .pad {
-        margin-left: 0;
-        margin-right: __sidebar_width__;
-    }
-
 #dokuwiki__footer {
     clear: both;
 }
