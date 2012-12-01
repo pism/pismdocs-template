@@ -255,7 +255,7 @@ div.dokuwiki a.windows:hover,
 div.dokuwiki a.windows:active,
 div.dokuwiki a.interwiki:hover,
 div.dokuwiki a.interwiki:active {
-  color: __text__;
+  text-decoration: underline;
 }
 
 /* email link */
