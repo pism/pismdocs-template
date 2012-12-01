@@ -9,7 +9,12 @@
       lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
+    <title>
+      <?php
+         if (tpl_pagetitle($id=NULL, $ret=true) != "home") tpl_pagetitle();
+         ?>
+      [<?php echo strip_tags($conf['title']) ?>]
+    </title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders() ?>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -51,7 +56,11 @@
               <?php tpl_searchform(); ?>
             </div>
             <div id="dokuwiki__tool_flushleft">
-              <?php tpl_actionlink('edit'); tpl_actionlink('media'); tpl_actionlink('revisions');?>
+              <?php
+                 if ($_SERVER['REMOTE_USER']) { /* if logged in... */
+                   tpl_actionlink('edit'); tpl_actionlink('media'); tpl_actionlink('revisions');
+                 }
+                 ?>
             </div>
           </div> <!-- site tools -->
           <div class="clearer"></div>
