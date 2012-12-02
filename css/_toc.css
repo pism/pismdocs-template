@@ -53,6 +53,10 @@ div.dokuwiki ul.toc {
   margin: 0;
 }
 
+div.dokuwiki ul.toc ul {
+  border: none;
+}
+
 div.dokuwiki ul.toc div.li {
   padding-left: 0.4em;
 }

@@ -1,5 +1,4 @@
-<!-- -*- mode: html; tab-width: 2 -*- -->
-<?php
+<?php /* -*- mode: html-helper; -*- */
    if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
    @require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
 
@@ -7,7 +6,7 @@
    ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang'] ?>"
       lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>
       <?php
@@ -35,9 +34,7 @@
         <div id="dokuwiki__header">
 
           <div class="headings">
-            <?php /* how to insert logo instead (if no CSS image replacement technique is used):
-                  upload your logo into the data/media folder (root of the media manager) and replace 'logo.png' accordingly: */
-                  tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h"')  ?>
+            <?php tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h"')  ?>
             <div class="clearer"></div>
           </div>
 
@@ -51,7 +48,7 @@
           <div class="clearer"></div>
 
           <!-- SITE TOOLS -->
-          <div class="dokuwiki__tools" id="noborder">
+          <div class="dokuwiki__tools">
             <div class="dokuwiki__tool_right">
               <?php tpl_searchform(); ?>
             </div>
