@@ -1,4 +1,4 @@
-<?php /* -*- mode: html-helper; -*- */
+<?php /* -*- mode: html; -*- */
    if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
    @require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
 
@@ -10,9 +10,12 @@
     <meta charset="UTF-8" />
     <title>
       <?php
-         if (tpl_pagetitle($id=NULL, $ret=true) != "home") tpl_pagetitle();
+         echo strip_tags($conf['title']);
+         if (tpl_pagetitle($id=NULL, $ret=true) != "home") {
+           echo " : ";
+           tpl_pagetitle();
+         }
          ?>
-      [<?php echo strip_tags($conf['title']) ?>]
     </title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders() ?>
