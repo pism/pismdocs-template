@@ -17,14 +17,14 @@
 div.wrapper {
     background-color: __background__;
     opacity: 0.95;
-    border: solid 1px __pism_logo_dark__;
-    border-top: none;
 }
 
 #dokuwiki__header {
     background-color: __background__;
+}
+
+.dokuwiki.site {
     border: solid 1px __pism_logo_dark__;
-    border-bottom: none;
 }
 
 body {
